@@ -43,14 +43,13 @@ const SignIn = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     onBlur={() => handleBlur("email")}
-                    className={`w-full rounded border p-2 shadow mt-1 outline-none text-neutral-800 ${
-                        emailTouched && !email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) ? "border-red-500" : "border-gray-300"
-                    }`}
+                    className={`w-full rounded border p-2 shadow mt-1 outline-none text-neutral-800 ${emailTouched && !email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/) ? "border-red-500" : "border-gray-300"
+                        }`}
                     placeholder="Enter your email"
                     required
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 />
-                {emailTouched && !email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) && (
+                {emailTouched && !email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/) && (
                     <span className="mt-1 text-xs text-red-500">
                         Please enter a valid email address
                     </span>
@@ -65,11 +64,10 @@ const SignIn = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     onBlur={() => handleBlur("password")}
-                    className={`w-full rounded border p-2 shadow mt-1 outline-none text-neutral-800 peer ${
-                        passwordTouched && !password
+                    className={`w-full rounded border p-2 shadow mt-1 outline-none text-neutral-800 peer ${passwordTouched && !password
                             ? "border-red-500"
                             : "border-gray-300"
-                    }`}
+                        }`}
                     placeholder="Enter your password"
                     required
                     pattern=".{7,}"

@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { legacy_createStore as createStore, combineReducers, applyMiddleware } from 'redux';
 import { thunk } from 'redux-thunk';
 import { loginReducer } from '../components/Modal/SignIn/module/reducer/reducer';
 import volcanoReducer from '../components/VolcanoTable/module/reducer/volcanoReducer';

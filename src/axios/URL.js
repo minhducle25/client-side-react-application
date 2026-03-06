@@ -1,1 +1,1 @@
-export const API_VOL = "http://4.237.58.241:3000";
+export const API_VOL = "https://min-volcano.duckdns.org";
