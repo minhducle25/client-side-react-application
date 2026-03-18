@@ -19,7 +19,7 @@ export const isTokenExpired = () => {
 
 export const login = (email, password) => async (dispatch) => {
   try {
-    const response = await API('user/login2', 'POST', { email, password });
+    const response = await API('user/login', 'POST', { email, password });
     if (response.data && response.data.token) {
       localStorage.setItem('token', response.data.token);
       dispatch(loginUser(response.data.token));
@@ -46,3 +46,4 @@ export const logout = () => (dispatch) => {
   logoutTimeout = null;
   dispatch(logoutUser());
 };
+

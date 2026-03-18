@@ -164,3 +164,22 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <div align="center">
   <b>Built with passion and curiosity for our rumbling Earth. 🌍🔥</b>
 </div>
+
+---
+
+## Netlify Deployment (Backend URL)
+
+1. In Netlify, open your site and go to **Project configuration** -> **Environment variables**.
+2. Add this variable:
+
+```bash
+REACT_APP_API_BASE_URL=https://your-backend-service.leapcell.app
+```
+
+3. Trigger a redeploy.
+4. Build settings should be:
+
+- Build command: `npm run build`
+- Publish directory: `build`
+
+This repository includes `netlify.toml` with SPA redirect support.
